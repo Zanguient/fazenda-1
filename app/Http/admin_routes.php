@@ -74,4 +74,8 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== Bovinos ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/bovinos', 'LA\BovinosController');
 	Route::get(config('laraadmin.adminRoute') . '/bovino_dt_ajax', 'LA\BovinosController@dtajax');
+
+	/* ================== Ordenhas ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/ordenhas', 'LA\OrdenhasController');
+	Route::get(config('laraadmin.adminRoute') . '/ordenha_dt_ajax', 'LA\OrdenhasController@dtajax');
 });
