@@ -23,7 +23,7 @@ class BovinosController extends Controller
 {
 	public $show_action = true;
 	public $view_col = 'nome';
-	public $listing_cols = ['id', 'nome', 'sexo'];
+	public $listing_cols = ['id', 'nome', 'sexo', 'nascimento', 'pai', 'mae', 'data_entrada', 'peso', 'origem', 'cateagoria'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

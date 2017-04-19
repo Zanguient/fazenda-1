@@ -20,6 +20,13 @@ class CreateBovinosTable extends Migration
         Module::generate("Bovinos", 'bovinos', 'nome', 'fa-cube', [
             ["nome", "Nome", "String", false, "", 0, 256, false],
             ["sexo", "Sexo", "Dropdown", false, "", 0, 0, false, ["MACHO","FEMEA"]],
+            ["nascimento", "Nascimento", "Date", false, "", 0, 0, false],
+            ["pai", "Pai", "Dropdown", false, "", 0, 0, false, "@bovinos"],
+            ["mae", "Mae", "Dropdown", false, "", 0, 0, false, "@bovinos"],
+            ["data_entrada", "Data Entrada", "Date", false, "", 0, 0, false],
+            ["peso", "Peso", "Decimal", false, "", 0, 11, false],
+            ["origem", "Origem", "String", false, "", 0, 256, false],
+            ["cateagoria", "Categoria", "Dropdown", false, "", 0, 0, false, ["BEZERRO","NOVILHA","REPRODUTOR","MATRIZ"]],
         ]);
 		
 		/*

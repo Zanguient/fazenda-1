@@ -61,6 +61,13 @@
 					{{--
 					@la_input($module, 'nome')
 					@la_input($module, 'sexo')
+					@la_input($module, 'nascimento')
+					@la_input($module, 'pai')
+					@la_input($module, 'mae')
+					@la_input($module, 'data_entrada')
+					@la_input($module, 'peso')
+					@la_input($module, 'origem')
+					@la_input($module, 'cateagoria')
 					--}}
 				</div>
 			</div>

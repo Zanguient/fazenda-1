@@ -109,6 +109,13 @@
 					<div class="panel-body">
 						@la_display($module, 'nome')
 						@la_display($module, 'sexo')
+						@la_display($module, 'nascimento')
+						@la_display($module, 'pai')
+						@la_display($module, 'mae')
+						@la_display($module, 'data_entrada')
+						@la_display($module, 'peso')
+						@la_display($module, 'origem')
+						@la_display($module, 'cateagoria')
 					</div>
 				</div>
 			</div>
