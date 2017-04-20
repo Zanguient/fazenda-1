@@ -108,7 +108,6 @@ class OrdenhasController extends Controller
 			if(isset($ordenha->id)) {
 				$module = Module::get('Ordenhas');
 				$module->row = $ordenha;
-				
 				return view('la.ordenhas.show', [
 					'module' => $module,
 					'view_col' => $this->view_col,
@@ -138,9 +137,7 @@ class OrdenhasController extends Controller
 			$ordenha = Ordenha::find($id);
 			if(isset($ordenha->id)) {	
 				$module = Module::get('Ordenhas');
-				
 				$module->row = $ordenha;
-				
 				return view('la.ordenhas.edit', [
 					'module' => $module,
 					'view_col' => $this->view_col,
@@ -246,4 +243,28 @@ class OrdenhasController extends Controller
 		$out->setData($data);
 		return $out;
 	}
+    /**
+     * Datatable Ajax fetch
+     *
+     * @return
+     */
+    public function getInsert(){
+        $bovinos_cols = ['id', 'nome', 'sexo'];
+        $bovinos = DB::table('bovinos')->select($bovinos_cols)->whereNull('deleted_at');
+        $out = Datatables::of($bovinos)->make();
+        $data = $out->getData();
+        $module = Module::get('Ordenhas');
+        if(Module::hasAccess($module->id)) {
+            return View('la.ordenhas.insert', [
+                'show_actions' => $this->show_action,
+                'listing_cols' => $this->listing_cols,
+                'module' => $module,
+                'bovinos'=> $data->data
+            ]);
+        } else {
+            return redirect(config('laraadmin.adminRoute')."/");
+        }
+    }
+
+
 }

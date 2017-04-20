@@ -6,11 +6,6 @@
 @section("sub_section", "Listing")
 @section("htmlheader_title", "Ordenhas Listing")
 
-@section("headerElems")
-@la_access("Ordenhas", "create")
-	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Ordenha</button>
-@endla_access
-@endsection
 
 @section("main-content")
 
@@ -39,6 +34,7 @@
 		</tr>
 		</thead>
 		<tbody>
+
 			
 		</tbody>
 		</table>
@@ -57,7 +53,7 @@
 			<div class="modal-body">
 				<div class="box-body">
                     @la_form($module)
-					
+
 					{{--
 					@la_input($module, 'animal')
 					@la_input($module, 'ordenha1')

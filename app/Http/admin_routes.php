@@ -78,4 +78,5 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== Ordenhas ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/ordenhas', 'LA\OrdenhasController');
 	Route::get(config('laraadmin.adminRoute') . '/ordenha_dt_ajax', 'LA\OrdenhasController@dtajax');
+	Route::get(config('laraadmin.adminRoute') . '/ordenhas_insert', 'LA\OrdenhasController@getInsert');
 });
