@@ -75,26 +75,49 @@ class OrdenhasController extends Controller
 	 */
 	public function store(Request $request)
 	{
+
 		if(Module::hasAccess("Ordenhas", "create")) {
-		
 			$rules = Module::validateRules("Ordenhas", $request);
-			
 			$validator = Validator::make($request->all(), $rules);
-			
+
+			$i = 0;
+
 			if ($validator->fails()) {
 				return redirect()->back()->withErrors($validator)->withInput();
 			}
 			
 			$insert_id = Module::insert("Ordenhas", $request);
-			
-			return redirect()->route(config('laraadmin.adminRoute') . '.ordenhas.index');
+			return redirect()->route(config('laraadmin.adminRoute') . '.ordenhas.insert');
 			
 		} else {
 			return redirect(config('laraadmin.adminRoute')."/");
 		}
 	}
 
-	/**
+
+    public function guarda(Request $request)
+    {
+        if(Module::hasAccess("Ordenhas", "create")) {
+
+            $rules = Module::validateRules("Ordenhas", $request);
+
+            $validator = Validator::make($request->all(), $rules);
+
+            if ($validator->fails()) {
+                return redirect()->back()->withErrors($validator)->withInput();
+            }
+
+            $insert_id = Module::insert("Ordenhas", $request);
+
+            return redirect()->route(config('laraadmin.adminRoute') . '.ordenha.index');
+
+        } else {
+            return redirect(config('laraadmin.adminRoute')."/");
+        }
+    }
+
+
+    /**
 	 * Display the specified ordenha.
 	 *
 	 * @param  int  $id
@@ -191,7 +214,6 @@ class OrdenhasController extends Controller
 	{
 		if(Module::hasAccess("Ordenhas", "delete")) {
 			Ordenha::find($id)->delete();
-			
 			// Redirecting to index() method
 			return redirect()->route(config('laraadmin.adminRoute') . '.ordenhas.index');
 		} else {
@@ -211,7 +233,6 @@ class OrdenhasController extends Controller
 		$data = $out->getData();
 
 		$fields_popup = ModuleFields::getModuleFields('Ordenhas');
-		
 		for($i=0; $i < count($data->data); $i++) {
 			for ($j=0; $j < count($this->listing_cols); $j++) { 
 				$col = $this->listing_cols[$j];
@@ -243,11 +264,13 @@ class OrdenhasController extends Controller
 		$out->setData($data);
 		return $out;
 	}
-    /**
-     * Datatable Ajax fetch
-     *
-     * @return
-     */
+	public function dtajaxbovino(){
+        $values = DB::table('bovinos')->select(['id', 'nome'])->whereNull('deleted_at');
+        $out = Datatables::of($values)->make();
+        $data = $out->getData();
+        $out->setData($data);
+        return $out;
+    }
     public function getInsert(){
         $bovinos_cols = ['id', 'nome', 'sexo'];
         $bovinos = DB::table('bovinos')->select($bovinos_cols)->whereNull('deleted_at');

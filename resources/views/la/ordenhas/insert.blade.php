@@ -6,9 +6,11 @@
 @section("sub_section", "Listing")
 @section("htmlheader_title", "Ordenhas Listing")
 
+@push('scripts')
+<script src="{{ asset('la-assets/js/angular.min.js') }}"></script>
+@endpush
 
 @section("main-content")
-
     @if (count($errors) > 0)
         <div class="alert alert-danger">
             <ul>
@@ -18,93 +20,87 @@
             </ul>
         </div>
     @endif
-    @foreach( $bovinos as $bov )
-       <pre> {{$bov['0']. " ".$bov['1'].  " ". $bov['2'] }} </pre>
+     Lote
+    <select name="lote" id="lote">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <table cellpadding="0" cellspacing="0">
+        <thead>
+        <tr>
+            <td>Animal</td>
+            <td>1 Ordenha</td>
+            <td>2 Ordenha</td>
+            <td>Total</td>
+        </tr>
+        </thead>
+    @foreach ($bovinos as $bov)
+        <tr class="success">
+        @la_access("Ordenhas", "create")
+           {!! Form::open(['action' => 'LA\OrdenhasController@store', 'id' => $bov['1']]) !!}
+            <tr>
+                <td class="col-lg-2">
+                    {{ $bov['1'] }}
+                    {{ Form::hidden('animal', $bov['0'] , array('class' => 'form-control'
+                    , 'required', 'ng-model'=> 'bov.animal')) }}
+                </td>
+                <td>
+                    {{ Form::text('ordenha1', null , array('class' => 'form-control','required')) }}
+                </td>
+                <td>
+                     {{ Form::text('ordenha2', null , array('class' => 'form-control', 'required')) }}
+                </td>
+                <td>
+                    {{ Form::text('total', null , array('class' => 'form-control')) }}
+                </td>
+                <td>
+                    {!! Form::submit( 'Lancar', ['class'=>'btn btn-success']) !!}
+                    {!! Form::close() !!}
+                </td>
+            </tr>
+        @endla_access
     @endforeach
-    <Br>
-    <Br>
-
-
-
-    <div class="box box-success">
-        <!--<div class="box-header"></div>-->
-        <div class="box-body">
-            <table id="example1" class="table table-bordered">
-                <thead>
-                <tr class="success">
-                    @foreach( $listing_cols as $col )
-                        <th>  {{ $module->fields[$col]['label'] or ucfirst($col) }}</th>
-                    @endforeach
-                    @if($show_actions)
-                        <th>Actions</th>
-                    @endif
-                </tr>
-                </thead>
-                <tbody>
-
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    @la_access("Ordenhas", "create")
-    <div class="modal fade" id="AddModal" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Add Ordenha</h4>
-                </div>
-                {!! Form::open(['action' => 'LA\OrdenhasController@store', 'id' => 'ordenha-add-form']) !!}
-                <div class="modal-body">
-                    <div class="box-body">
-                        @la_form($module)
-
-                        {{--
-                        @la_input($module, 'animal')
-                        @la_input($module, 'ordenha1')
-                        @la_input($module, 'ordenha2')
-                        @la_input($module, 'total')
-                        --}}
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    {!! Form::submit( 'Submit', ['class'=>'btn btn-success']) !!}
-                </div>
-                {!! Form::close() !!}
-            </div>
-        </div>
-    </div>
-    @endla_access
+   </table>
 
 @endsection
-
 @push('styles')
 <link rel="stylesheet" type="text/css" href="{{ asset('la-assets/plugins/datatables/datatables.min.css') }}"/>
 @endpush
-
 @push('scripts')
 <script src="{{ asset('la-assets/plugins/datatables/datatables.min.js') }}"></script>
-<script>
-    $(function () {
-        $("#example1").DataTable({
-            processing: true,
-            serverSide: true,
-            ajax: "{{ url(config('laraadmin.adminRoute') . '/ordenha_dt_ajax') }}",
-            language: {
-                lengthMenu: "_MENU_",
-                search: "_INPUT_",
-                searchPlaceholder: "Search"
-            },
-            @if($show_actions)
-            columnDefs: [ { orderable: false, targets: [-1] }],
-            @endif
-        });
-        $("#ordenha-add-form").validate({
 
-        });
+<script>
+    $.ajax({
+        url: '/home/upload/',
+        type: 'POST',
+        data: {_token: CSRF_TOKEN},
+        dataType: 'JSON',
+        success: function (data) {
+            console.log(data);
+        }
     });
 </script>
+
+            <style>
+                input {
+                    border:none;
+                    width:100%;
+                    height:100%;
+                    font-family: Verdana, Helvetica, Arial, FreeSans, sans-serif;
+                    font-size:12px;
+                    padding: 0 4px 0 4px;
+                }
+                input:focus {
+                    border:2px solid #5292F7;
+                    outline: none;
+                }
+                table{
+                    border-collapse: collapse;
+                    border: 0 !important;
+                    padding: 0 !important;
+                }
+
+            </style>
 @endpush
