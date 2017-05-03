@@ -1,1 +1,1 @@
-var ordenhaApp = angular.module('appOrdenhaCtrl', ['ordenhaController', 'ordenhaService']);
+var ordenhaApp = angular.module('appOrdenha', ['ordenhaController', 'ordenhaService']);

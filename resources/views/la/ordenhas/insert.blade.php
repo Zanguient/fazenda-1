@@ -7,8 +7,14 @@
 @section("htmlheader_title", "Ordenhas Listing")
 
 @push('scripts')
-<script src="{{ asset('la-assets/js/angular.min.js') }}"></script>
+    <script src="{{ asset('la-assets/js/angular.min.js') }}"></script>
+    <script src="{{ asset('la-assets/js/services/ordenhaService.js') }}"></script>
+    <script src="{{ asset('la-assets/js/controllers/OrdenhaCtrl.js') }}"></script>
+    {{--<script src="{{ asset('la-assets/js/angularApp.js') }}"></script>--}}
+    {{--<script src="{{ asset('la-assets/js/app.js') }}"></script>--}}
 @endpush
+
+<div ng-app="appOrdenha" ng-controller="ordenhaController">
 
 @section("main-content")
     @if (count($errors) > 0)
@@ -21,6 +27,7 @@
         </div>
     @endif
      Lote
+    <div>
     <select name="lote" id="lote">
         <option value="1">1</option>
         <option value="2">2</option>
@@ -63,6 +70,7 @@
         @endla_access
     @endforeach
    </table>
+    </div>
 
 @endsection
 @push('styles')
@@ -71,36 +79,28 @@
 @push('scripts')
 <script src="{{ asset('la-assets/plugins/datatables/datatables.min.js') }}"></script>
 
-<script>
-    $.ajax({
-        url: '/home/upload/',
-        type: 'POST',
-        data: {_token: CSRF_TOKEN},
-        dataType: 'JSON',
-        success: function (data) {
-            console.log(data);
-        }
-    });
-</script>
 
-            <style>
-                input {
-                    border:none;
-                    width:100%;
-                    height:100%;
-                    font-family: Verdana, Helvetica, Arial, FreeSans, sans-serif;
-                    font-size:12px;
-                    padding: 0 4px 0 4px;
-                }
-                input:focus {
-                    border:2px solid #5292F7;
-                    outline: none;
-                }
-                table{
-                    border-collapse: collapse;
-                    border: 0 !important;
-                    padding: 0 !important;
-                }
+<style>
+    input {
+        border:none;
+        width:100%;
+        height:100%;
+        font-family: Verdana, Helvetica, Arial, FreeSans, sans-serif;
+        font-size:12px;
+        padding: 0 4px 0 4px;
+    }
+    input:focus {
+        border:2px solid #5292F7;
+        outline: none;
+    }
+    table{
+        border-collapse: collapse;
+        border: 0 !important;
+        padding: 0 !important;
+    }
 
-            </style>
+</style>
 @endpush
+
+</div>
+
