@@ -80,6 +80,7 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::get(config('laraadmin.adminRoute') . '/ordenha_dt_ajax', 'LA\OrdenhasController@dtajax');
 	Route::get(config('laraadmin.adminRoute') . '/ordenha_dt_ajax_bovinos', 'LA\OrdenhasController@dtajaxbovino');
 	Route::get(config('laraadmin.adminRoute') . '/ordenhas1', 'LA\OrdenhasController@getInsert')->name('admin.ordenhas.insert');
+	Route::get(config('laraadmin.adminRoute') . '/ordenhas2', 'LA\OrdenhasController@getInsert2')->name('admin.ordenhas.insert2');
 
 	/* ================== Fazendas ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/fazendas', 'LA\FazendasController');

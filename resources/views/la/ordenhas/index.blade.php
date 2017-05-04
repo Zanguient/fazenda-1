@@ -7,6 +7,14 @@
 @section("htmlheader_title", "Ordenhas Listing")
 
 
+@section("headerElems")
+    @la_access("Bovinos", "create")
+    <button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Lançar Lote</button>
+    @endla_access
+@endsection
+
+
+
 @section("main-content")
 
 @if (count($errors) > 0)
@@ -35,38 +43,32 @@
 		</thead>
 		<tbody>
 
-			
 		</tbody>
 		</table>
 	</div>
 </div>
 
+<div id="teste" style="height: 50px; width: auto; background-color: red;">
+    TESTE!
+
+</div>
+
+
 @la_access("Ordenhas", "create")
 <div class="modal fade" id="AddModal" role="dialog" aria-labelledby="myModalLabel">
-	<div class="modal-dialog" role="document">
+	<div class="modal-admin" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Add Ordenha</h4>
+				<h4 class="modal-title" id="myModalLabel">Lancamento de Ordenhas</h4>
 			</div>
-			{!! Form::open(['action' => 'LA\OrdenhasController@store', 'id' => 'ordenha-add-form']) !!}
 			<div class="modal-body">
-				<div class="box-body">
-                    @la_form($module)
+                <iframe src="/admin/ordenhas2" width="100%" height="100%" frameborder="0"></iframe>
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Lancar</button>
+            </div>
 
-					{{--
-					@la_input($module, 'animal')
-					@la_input($module, 'ordenha1')
-					@la_input($module, 'ordenha2')
-					@la_input($module, 'total')
-					--}}
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				{!! Form::submit( 'Submit', ['class'=>'btn btn-success']) !!}
-			</div>
-			{!! Form::close() !!}
 		</div>
 	</div>
 </div>
@@ -76,6 +78,14 @@
 
 @push('styles')
 <link rel="stylesheet" type="text/css" href="{{ asset('la-assets/plugins/datatables/datatables.min.css') }}"/>
+<style>
+    .modal-admin {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 500px;
+    }
+</style>
 @endpush
 
 @push('scripts')

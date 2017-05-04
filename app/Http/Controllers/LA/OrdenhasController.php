@@ -85,9 +85,9 @@ class OrdenhasController extends Controller
 			if ($validator->fails()) {
 				return redirect()->back()->withErrors($validator)->withInput();
 			}
-			
+
 			$insert_id = Module::insert("Ordenhas", $request);
-			return redirect()->route(config('laraadmin.adminRoute') . '.ordenhas.insert');
+        	return redirect()->route(config('laraadmin.adminRoute') . '.ordenhas.insert');
 			
 		} else {
 			return redirect(config('laraadmin.adminRoute')."/");
@@ -283,6 +283,19 @@ class OrdenhasController extends Controller
                 'listing_cols' => $this->listing_cols,
                 'module' => $module,
                 'bovinos'=> $data->data
+            ]);
+        } else {
+            return redirect(config('laraadmin.adminRoute')."/");
+        }
+    }
+
+    public function getInsert2(){
+        $module = Module::get('Ordenhas');
+        if(Module::hasAccess($module->id)) {
+            return View('la.ordenhas.insert2', [
+                'show_actions' => $this->show_action,
+                'listing_cols' => $this->listing_cols,
+                'module' => $module,
             ]);
         } else {
             return redirect(config('laraadmin.adminRoute')."/");
