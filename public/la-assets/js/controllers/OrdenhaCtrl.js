@@ -11,11 +11,6 @@ angular.module('appOrdenha', ['ordenhaService'])
                 $scope.bovinos = data.data;
                 $scope.bovinos['total'] = 0;
                 var i = 0, tam = $scope.bovinos.length;
-                for(; i < tam; i++){
-                    $scope.bovinos[i][2] = 10;
-                    $scope.bovinos[i][3] = 15;
-                    $scope.bovinos[i][4] = 25;
-                }
             });
         $scope.lancaOrdenha = function () {
             console.log("chamou a funcao!");
@@ -29,17 +24,15 @@ angular.module('appOrdenha', ['ordenhaService'])
                     "ordenha2": $scope.bovinos[i][3],
                     "total": $scope.bovinos[i][4]
                 };
-                console.log(ordenha);
-                Ordenha.save(ordenha).success(function (data) {
-                }).error(function (data) {
-                });
+                console.log(JSON.stringify(ordenha));
+                if((ordenha.ordenha1 != null) && (ordenha.ordenha2 != null)) {
+                    Ordenha.save(ordenha).success(function (data) {
+                        window.location.replace("/admin/ordenhas");
+                    }).error(function (data) {
+                    });
+                }
             }
-            console.log("lancou as ordenhas!");
-
-
-            console.log("aqui 1!");
         };
-
         $scope.atualizaTotal= function(ordenha, index) {
             // limpa o total naquele indice para atualizar
             if (ordenha[3] == null) {

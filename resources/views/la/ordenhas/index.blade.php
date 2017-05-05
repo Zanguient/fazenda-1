@@ -48,28 +48,44 @@
 	</div>
 </div>
 
-<div id="teste" style="height: 50px; width: auto; background-color: red;">
-    TESTE!
-
-</div>
-
 
 @la_access("Ordenhas", "create")
 <div class="modal fade" id="AddModal" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-admin" role="document">
+        <div ng-app="appOrdenha" ng-controller="ordenhaController">
+         <form ng-submit="lancaOrdenha()" method="post">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title" id="myModalLabel">Lancamento de Ordenhas</h4>
 			</div>
 			<div class="modal-body">
-                <iframe src="/admin/ordenhas2" width="100%" height="100%" frameborder="0"></iframe>
-			</div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Lancar</button>
+                    <table class="table">
+                        <thead style="text-align: right;">
+                            <tr><td>Animal:</td>
+                            <td>1 Ordenha:</td>
+                            <td>2 Ordenha:</td>
+                            <td>Total: </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="bov in bovinos">
+                            <td style="text-align: right;">@{{bov['1']}}</td>
+                            <td><input type="number" ng-change="atualizaTotal(bovinos[$index], $index)" ng-model="bovinos[$index][2]" ng-required class="form-control"></td>
+                            <td><input type="number" ng-change="atualizaTotal(bovinos[$index], $index)" ng-model="bovinos[$index][3]" ng-required class="form-control"></td>
+                            <td><input type="number" ng-model="bovinos[$index][4]" ng-readonly="true" class="form-control"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                <h3 style="text-align: right;">Total : @{{bovinos['total']}}<br></h3>
             </div>
-
-		</div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-success" ng-click="lancaOrdenha()" data-dismiss="modal">Lancar</button>
+            </div>
+        </div>
+        </form>
+    </div>
 	</div>
 </div>
 @endla_access
@@ -86,10 +102,40 @@
         height: 500px;
     }
 </style>
+
+<style>
+    input {
+        border:none;
+        width:100%;
+        height:100%;
+        font-family: Verdana, Helvetica, Arial, FreeSans, sans-serif;
+        font-size:12px;
+        padding: 0 4px 0 4px;
+    }
+    input:focus {
+        border:2px solid #5292F7;
+        outline: none;
+    }
+    table{
+        border-collapse: collapse;
+        border: 0 !important;
+        padding: 0 !important;
+    }
+</style>
+
+
 @endpush
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+
+
 
 @push('scripts')
 <script src="{{ asset('la-assets/plugins/datatables/datatables.min.js') }}"></script>
+<script src="{{ asset('la-assets/js/angularApp.js') }}"></script>
+<script src="{{ asset('la-assets/js/controllers/OrdenhaCtrl.js') }}"></script>
+<script src="{{ asset('la-assets/js/services/ordenhaService.js') }}"></script>
 <script>
 $(function () {
 	$("#example1").DataTable({

@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c02f1968-7430-4b61-86e3-f3ff31ea8d05" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/la-assets/ordenha_insere.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/la/ordenhas/insere.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/ordenhas/insert2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LA/OrdenhasController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LA/OrdenhasController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/admin_routes.php" afterPath="$PROJECT_DIR$/app/Http/admin_routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/la-assets/js/controllers/OrdenhaCtrl.js" afterPath="$PROJECT_DIR$/public/la-assets/js/controllers/OrdenhaCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/la-assets/js/services/ordenhaService.js" afterPath="$PROJECT_DIR$/public/la-assets/js/services/ordenhaService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/ordenhas/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/ordenhas/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/ordenhas/insert.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/ordenhas/insert.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/ordenhas/insert2.php" afterPath="$PROJECT_DIR$/resources/views/la/ordenhas/insert2.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,15 +42,28 @@
     <favorites_list name="fazenda" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/la/ordenhas/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+            <state relative-caret-position="576">
+              <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding>
-                <element signature="e#1139#1196#0#HTML" expanded="true" />
+                <element signature="e#1442#1681#0#HTML" expanded="false" />
+                <element signature="e#1783#1809#0#HTML" expanded="true" />
+                <element signature="e#2188#2214#0#HTML" expanded="true" />
+                <element signature="e#2821#2847#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insert.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/la/ordenhas/insert.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="55" column="12" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="55" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,11 +71,9 @@
       <file leaf-file-name="OrdenhasController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LA/OrdenhasController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="80" column="66" lean-forward="true" selection-start-line="80" selection-start-column="66" selection-end-line="80" selection-end-column="66" />
-              <folding>
-                <element signature="e#7397#8080#0#PHP" expanded="false" />
-              </folding>
+            <state relative-caret-position="547">
+              <caret line="145" column="16" lean-forward="true" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,8 +81,8 @@
       <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/431ea5cb-b5e7-4e75-baff-2275a470ea99/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="58">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -85,28 +91,28 @@
       <file leaf-file-name="ordenhaService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/la-assets/js/services/ordenhaService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+            <state relative-caret-position="145">
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insert2.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/la/ordenhas/insert2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="15" column="92" lean-forward="false" selection-start-line="15" selection-start-column="92" selection-end-line="15" selection-end-column="92" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrdenhaCtrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrdenhaCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/la-assets/js/controllers/OrdenhaCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+            <state relative-caret-position="228">
+              <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angularApp.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/la-assets/js/angularApp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -123,7 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>laraadmin.adminro</find>
       <find>laraadmin.adminr</find>
       <find>laraadmin.admin</find>
       <find>laraadmin.adminRout</find>
@@ -153,6 +158,7 @@
       <find>s</find>
       <find>store2</find>
       <find>store</find>
+      <find>TES</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,7 +173,6 @@
         <option value="$PROJECT_DIR$/resources/views/la/ordenhas/Tarefas" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/../teste2.php" />
-        <option value="$PROJECT_DIR$/public/la-assets/js/angularApp.js" />
         <option value="$PROJECT_DIR$/resources/views/la/ordenhas/insere.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/la/ordenhas/insert.php" />
         <option value="$PROJECT_DIR$/public/la-assets/ordenha_insere.php" />
@@ -175,11 +180,12 @@
         <option value="$PROJECT_DIR$/resources/views/la/ordenhas/insert2.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LA/OrdenhasController.php" />
         <option value="$PROJECT_DIR$/public/la-assets/js/services/ordenhaService.js" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/431ea5cb-b5e7-4e75-baff-2275a470ea99/console.sql" />
         <option value="$PROJECT_DIR$/resources/views/la/ordenhas/insert.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/la/ordenhas/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/la/ordenhas/insert2.php" />
+        <option value="$PROJECT_DIR$/public/la-assets/js/angularApp.js" />
         <option value="$PROJECT_DIR$/public/la-assets/js/controllers/OrdenhaCtrl.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/431ea5cb-b5e7-4e75-baff-2275a470ea99/console.sql" />
+        <option value="$PROJECT_DIR$/resources/views/la/ordenhas/index.blade.php" />
       </list>
     </option>
   </component>
@@ -288,9 +294,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-24" />
     <option name="width" value="1366" />
-    <option name="height" value="792" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -309,6 +314,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -403,14 +409,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel-angular-comment-app-master" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="inser&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert2.php&#10;index.blade&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/bovinos/index.blade.php&#10;insert&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert.blade.php&#10;ord&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;data&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;orde&#9;FILE&#9;file:///var/www/html/fazenda/public/la-assets/js/controllers/OrdenhaCtrl.js&#10;ordenhaSe&#9;FILE&#9;file:///var/www/html/fazenda/public/la-assets/js/services/ordenhaService.js&#10;insert2&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert2.php&#10;Ordenhas&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;admin&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/admin_routes.php&#10;conso&#9;FILE&#9;file:///home/emmanuell/.PhpStorm2017.1/config/consoles/db/431ea5cb-b5e7-4e75-baff-2275a470ea99/console.sql&#10;app.php&#9;FILE&#9;file:///var/www/html/fazenda/config/app.php&#10;Ordenha&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;admin_r&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/admin_routes.php&#10;Ord&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;admin_route&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/admin_routes.php" />
+    <property name="SearchEverywhereHistoryKey" value="in&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert.blade.php&#10;insert&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert.blade.php&#10;database&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;app&#9;FILE&#9;file:///var/www/html/fazenda/public/la-assets/js/angularApp.js&#10;inser&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert2.php&#10;index.blade&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/bovinos/index.blade.php&#10;ord&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;data&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;orde&#9;FILE&#9;file:///var/www/html/fazenda/public/la-assets/js/controllers/OrdenhaCtrl.js&#10;ordenhaSe&#9;FILE&#9;file:///var/www/html/fazenda/public/la-assets/js/services/ordenhaService.js&#10;insert2&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert2.php&#10;Ordenhas&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;admin&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/admin_routes.php&#10;conso&#9;FILE&#9;file:///home/emmanuell/.PhpStorm2017.1/config/consoles/db/431ea5cb-b5e7-4e75-baff-2275a470ea99/console.sql&#10;app.php&#9;FILE&#9;file:///var/www/html/fazenda/config/app.php&#10;Ordenha&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;admin_r&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/admin_routes.php&#10;Ord&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;admin_route&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/admin_routes.php" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="full.screen.before.presentation.mode" value="false" />
@@ -538,11 +543,12 @@
       <workItem from="1493743398195" duration="3344000" />
       <workItem from="1493813539050" duration="24157000" />
       <workItem from="1493900202478" duration="24203000" />
+      <workItem from="1493986339075" duration="9118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163954000" />
+    <option name="totallyTimeSpent" value="173072000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -554,7 +560,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-24" width="1366" height="792" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -562,12 +568,11 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.609375" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35605007" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47395834" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.472879" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20863836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28696924" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27955493" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22620791" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.453125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -576,6 +581,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27955493" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -841,13 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/la-assets/js/angularApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/la/layouts/partials/file_manager.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -902,7 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,9 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -920,7 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,15 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="683">
           <caret line="82" column="88" lean-forward="false" selection-start-line="82" selection-start-column="88" selection-end-line="82" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/431ea5cb-b5e7-4e75-baff-2275a470ea99/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -944,63 +929,75 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1073">
           <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/la/ordenhas/insert.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/la-assets/js/angularApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="23" column="45" lean-forward="true" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-          <folding>
-            <element signature="e#1410#1631#0#HTML" expanded="false" />
-            <element signature="e#1652#1728#0#HTML" expanded="false" />
-            <element signature="e#1742#1861#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/la-assets/js/services/ordenhaService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        <state relative-caret-position="29">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LA/OrdenhasController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="80" column="66" lean-forward="true" selection-start-line="80" selection-start-column="66" selection-end-line="80" selection-end-column="66" />
-          <folding>
-            <element signature="e#7397#8080#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/la/ordenhas/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
-          <folding>
-            <element signature="e#1139#1196#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="547">
+          <caret line="145" column="16" lean-forward="true" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/la/ordenhas/insert2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="15" column="92" lean-forward="false" selection-start-line="15" selection-start-column="92" selection-end-line="15" selection-end-column="92" />
+        <state relative-caret-position="-236">
+          <caret line="12" column="59" lean-forward="true" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/la-assets/js/services/ordenhaService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/la-assets/js/controllers/OrdenhaCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+        <state relative-caret-position="228">
+          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/431ea5cb-b5e7-4e75-baff-2275a470ea99/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/la/ordenhas/insert.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="55" column="12" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="55" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/la/ordenhas/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="e#1442#1681#0#HTML" expanded="false" />
+            <element signature="e#1783#1809#0#HTML" expanded="true" />
+            <element signature="e#2188#2214#0#HTML" expanded="true" />
+            <element signature="e#2821#2847#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

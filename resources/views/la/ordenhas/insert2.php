@@ -8,8 +8,12 @@
 </style>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+<script src="/la-assets/js/angularApp.js"></script>
 <script src="/la-assets/js/controllers/OrdenhaCtrl.js"></script>
 <script src="/la-assets/js/services/ordenhaService.js"></script>
+
+
+
 
 <div ng-app="appOrdenha" ng-controller="ordenhaController">
     <form ng-submit="lancaOrdenha()" method="post">
@@ -20,13 +24,11 @@
                 <td><input type="number" ng-change="atualizaTotal(bovinos[$index], $index)" ng-model="bovinos[$index][2]" ng-required class="form-control"></td>
                 <td><input type="number" ng-change="atualizaTotal(bovinos[$index], $index)" ng-model="bovinos[$index][3]" ng-required class="form-control"></td>
                 <td><input type="number" ng-model="bovinos[$index][4]" ng-readonly="true" class="form-control"></td>
-                {{bov[$index]}}
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td></td>
-
             </tr>
         </table>
     </form>
