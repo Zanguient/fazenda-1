@@ -78,9 +78,10 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== Ordenhas ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/ordenhas', 'LA\OrdenhasController');
 	Route::get(config('laraadmin.adminRoute') . '/ordenha_dt_ajax', 'LA\OrdenhasController@dtajax');
+
+    Route::get(config('laraadmin.adminRoute') . '/ordenhas1', 'LA\OrdenhasController@getInsert')->name('admin.ordenhas.insert');
 	Route::get(config('laraadmin.adminRoute') . '/ordenha_dt_ajax_bovinos', 'LA\OrdenhasController@dtajaxbovino');
-	Route::get(config('laraadmin.adminRoute') . '/ordenhas1', 'LA\OrdenhasController@getInsert')->name('admin.ordenhas.insert');
-	Route::get(config('laraadmin.adminRoute') . '/ordenhas2', 'LA\OrdenhasController@getInsert2')->name('admin.ordenhas.insert2');
+
 
 	/* ================== Fazendas ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/fazendas', 'LA\FazendasController');
@@ -89,4 +90,8 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== Patrimonios ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/patrimonios', 'LA\PatrimoniosController');
 	Route::get(config('laraadmin.adminRoute') . '/patrimonio_dt_ajax', 'LA\PatrimoniosController@dtajax');
+
+	/* ================== Funcionarios ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/funcionarios', 'LA\FuncionariosController');
+	Route::get(config('laraadmin.adminRoute') . '/funcionario_dt_ajax', 'LA\FuncionariosController@dtajax');
 });

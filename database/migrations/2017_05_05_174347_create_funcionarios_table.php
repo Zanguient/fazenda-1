@@ -8,7 +8,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Dwij\Laraadmin\Models\Module;
 
-class CreateOrdenhasTable extends Migration
+class CreateFuncionariosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,12 +17,21 @@ class CreateOrdenhasTable extends Migration
      */
     public function up()
     {
-        Module::generate("Ordenhas", 'ordenhas', 'animal', 'fa-cube', [
-            ["animal", "Animal", "Dropdown", false, "", 0, 0, false, "@bovinos"],
-            ["ordenha1", "1 Ordenha", "Decimal", false, "", 0, 11, false],
-            ["ordenha2", "2 Ordenha", "Decimal", false, "", 0, 11, false],
-            ["total", "Total", "Decimal", false, "", 0, 11, false],
-            ["lote", "Lote:", "Integer", false, "", 0, 11, false],
+        Module::generate("Funcionarios", 'funcionarios', 'nome', 'fa-cube', [
+            ["nome", "Nome", "String", false, "", 0, 256, false],
+            ["cpf", "CPF", "String", false, "", 0, 256, false],
+            ["funcao", "Funçao", "Dropdown", false, "", 0, 0, false, ["Inseminador","Tecnico","Mao de Obra"]],
+            ["celular", "Telefone Celular", "Mobile", false, "", 0, 20, false],
+            ["sexo", "Sexo", "Dropdown", false, "SEXO", 0, 0, false, ["MASCULINO","FEMININO"]],
+            ["data_nascimento", "Data de Nascimento", "Date", false, "", 0, 0, false],
+            ["telefone_residencial", "Telefone Residencial", "Mobile", false, "", 0, 20, false],
+            ["telefone_comercial", "Telefone Comercial", "Mobile", false, "", 0, 20, false],
+            ["city", "Cidade", "String", false, "", 0, 256, false],
+            ["bairro", "Bairro", "String", false, "", 0, 256, false],
+            ["numero", "Numero", "String", false, "", 0, 256, false],
+            ["rua", "Rua", "String", false, "", 0, 256, false],
+            ["complemento", "Complemento", "String", false, "", 0, 256, false],
+            ["cep", "CEP", "String", false, "", 0, 256, false],
         ]);
 		
 		/*
@@ -68,8 +77,8 @@ class CreateOrdenhasTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasTable('ordenhas')) {
-            Schema::drop('ordenhas');
+        if (Schema::hasTable('funcionarios')) {
+            Schema::drop('funcionarios');
         }
     }
 }

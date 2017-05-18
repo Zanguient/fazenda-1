@@ -23,7 +23,7 @@ class OrdenhasController extends Controller
 {
 	public $show_action = true;
 	public $view_col = 'animal';
-	public $listing_cols = ['id', 'animal', 'ordenha1', 'ordenha2', 'total'];
+	public $listing_cols = ['id', 'animal', 'ordenha1', 'ordenha2', 'total', 'lote'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns
@@ -75,49 +75,26 @@ class OrdenhasController extends Controller
 	 */
 	public function store(Request $request)
 	{
-
 		if(Module::hasAccess("Ordenhas", "create")) {
+		
 			$rules = Module::validateRules("Ordenhas", $request);
+			
 			$validator = Validator::make($request->all(), $rules);
-
-			$i = 0;
-
+			
 			if ($validator->fails()) {
 				return redirect()->back()->withErrors($validator)->withInput();
 			}
-
+			
 			$insert_id = Module::insert("Ordenhas", $request);
-        	return redirect()->route(config('laraadmin.adminRoute') . '.ordenhas.insert');
+			
+			return redirect()->route(config('laraadmin.adminRoute') . '.ordenhas.index');
 			
 		} else {
 			return redirect(config('laraadmin.adminRoute')."/");
 		}
 	}
 
-
-    public function guarda(Request $request)
-    {
-        if(Module::hasAccess("Ordenhas", "create")) {
-
-            $rules = Module::validateRules("Ordenhas", $request);
-
-            $validator = Validator::make($request->all(), $rules);
-
-            if ($validator->fails()) {
-                return redirect()->back()->withErrors($validator)->withInput();
-            }
-
-            $insert_id = Module::insert("Ordenhas", $request);
-
-            return redirect()->route(config('laraadmin.adminRoute') . '.ordenha.index');
-
-        } else {
-            return redirect(config('laraadmin.adminRoute')."/");
-        }
-    }
-
-
-    /**
+	/**
 	 * Display the specified ordenha.
 	 *
 	 * @param  int  $id
@@ -131,6 +108,7 @@ class OrdenhasController extends Controller
 			if(isset($ordenha->id)) {
 				$module = Module::get('Ordenhas');
 				$module->row = $ordenha;
+				
 				return view('la.ordenhas.show', [
 					'module' => $module,
 					'view_col' => $this->view_col,
@@ -160,7 +138,9 @@ class OrdenhasController extends Controller
 			$ordenha = Ordenha::find($id);
 			if(isset($ordenha->id)) {	
 				$module = Module::get('Ordenhas');
+				
 				$module->row = $ordenha;
+				
 				return view('la.ordenhas.edit', [
 					'module' => $module,
 					'view_col' => $this->view_col,
@@ -214,6 +194,7 @@ class OrdenhasController extends Controller
 	{
 		if(Module::hasAccess("Ordenhas", "delete")) {
 			Ordenha::find($id)->delete();
+			
 			// Redirecting to index() method
 			return redirect()->route(config('laraadmin.adminRoute') . '.ordenhas.index');
 		} else {
@@ -233,6 +214,7 @@ class OrdenhasController extends Controller
 		$data = $out->getData();
 
 		$fields_popup = ModuleFields::getModuleFields('Ordenhas');
+		
 		for($i=0; $i < count($data->data); $i++) {
 			for ($j=0; $j < count($this->listing_cols); $j++) { 
 				$col = $this->listing_cols[$j];
@@ -264,13 +246,7 @@ class OrdenhasController extends Controller
 		$out->setData($data);
 		return $out;
 	}
-	public function dtajaxbovino(){
-        $values = DB::table('bovinos')->select(['id', 'nome'])->whereNull('deleted_at');
-        $out = Datatables::of($values)->make();
-        $data = $out->getData();
-        $out->setData($data);
-        return $out;
-    }
+
     public function getInsert(){
         $bovinos_cols = ['id', 'nome', 'sexo'];
         $bovinos = DB::table('bovinos')->select($bovinos_cols)->whereNull('deleted_at');
@@ -288,6 +264,13 @@ class OrdenhasController extends Controller
             return redirect(config('laraadmin.adminRoute')."/");
         }
     }
+    public function dtajaxbovino()    {
+        $values = DB::table('bovinos')->select(['id', 'nome'])->whereNull('deleted_at');
+        $out = Datatables::of($values)->make();
+        $data = $out->getData();
+        $out->setData($data);
+        return $out;
+    }
 
     public function getInsert2(){
         $module = Module::get('Ordenhas');
@@ -301,6 +284,5 @@ class OrdenhasController extends Controller
             return redirect(config('laraadmin.adminRoute')."/");
         }
     }
-
 
 }

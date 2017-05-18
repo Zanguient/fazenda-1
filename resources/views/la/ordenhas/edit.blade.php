@@ -37,6 +37,7 @@
 					@la_input($module, 'ordenha1')
 					@la_input($module, 'ordenha2')
 					@la_input($module, 'total')
+					@la_input($module, 'lote')
 					--}}
                     <br>
 					<div class="form-group">

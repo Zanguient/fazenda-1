@@ -1,14 +1,14 @@
 @extends("la.layouts.app")
 
-@section("contentheader_title", "Ordenhas")
-@section("contentheader_description", "Ordenhas listing")
-@section("section", "Ordenhas")
+@section("contentheader_title", "Funcionarios")
+@section("contentheader_description", "Funcionarios listing")
+@section("section", "Funcionarios")
 @section("sub_section", "Listing")
-@section("htmlheader_title", "Ordenhas Listing")
+@section("htmlheader_title", "Funcionarios Listing")
 
 @section("headerElems")
-@la_access("Ordenhas", "create")
-	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Ordenha</button>
+@la_access("Funcionarios", "create")
+	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Funcionario</button>
 @endla_access
 @endsection
 
@@ -45,25 +45,34 @@
 	</div>
 </div>
 
-@la_access("Ordenhas", "create")
+@la_access("Funcionarios", "create")
 <div class="modal fade" id="AddModal" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Add Ordenha</h4>
+				<h4 class="modal-title" id="myModalLabel">Add Funcionario</h4>
 			</div>
-			{!! Form::open(['action' => 'LA\OrdenhasController@store', 'id' => 'ordenha-add-form']) !!}
+			{!! Form::open(['action' => 'LA\FuncionariosController@store', 'id' => 'funcionario-add-form']) !!}
 			<div class="modal-body">
 				<div class="box-body">
                     @la_form($module)
 					
 					{{--
-					@la_input($module, 'animal')
-					@la_input($module, 'ordenha1')
-					@la_input($module, 'ordenha2')
-					@la_input($module, 'total')
-					@la_input($module, 'lote')
+					@la_input($module, 'nome')
+					@la_input($module, 'cpf')
+					@la_input($module, 'funcao')
+					@la_input($module, 'celular')
+					@la_input($module, 'sexo')
+					@la_input($module, 'data_nascimento')
+					@la_input($module, 'telefone_residencial')
+					@la_input($module, 'telefone_comercial')
+					@la_input($module, 'city')
+					@la_input($module, 'bairro')
+					@la_input($module, 'numero')
+					@la_input($module, 'rua')
+					@la_input($module, 'complemento')
+					@la_input($module, 'cep')
 					--}}
 				</div>
 			</div>
@@ -90,7 +99,7 @@ $(function () {
 	$("#example1").DataTable({
 		processing: true,
         serverSide: true,
-        ajax: "{{ url(config('laraadmin.adminRoute') . '/ordenha_dt_ajax') }}",
+        ajax: "{{ url(config('laraadmin.adminRoute') . '/funcionario_dt_ajax') }}",
 		language: {
 			lengthMenu: "_MENU_",
 			search: "_INPUT_",
@@ -100,7 +109,7 @@ $(function () {
 		columnDefs: [ { orderable: false, targets: [-1] }],
 		@endif
 	});
-	$("#ordenha-add-form").validate({
+	$("#funcionario-add-form").validate({
 		
 	});
 });
