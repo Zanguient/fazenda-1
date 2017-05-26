@@ -24,6 +24,9 @@ class CreatePatrimoniosTable extends Migration
             ["data_entrada", "Data de Entrada", "Datetime", false, "", 0, 0, false],
             ["depreciacao", "Depreciacao", "Decimal", false, "", 0, 11, false],
             ["vida_util", "Vida Util", "Integer", false, "", 0, 11, false],
+            ["numero_nota", "Numero da Nota", "String", false, "", 0, 256, false],
+            ["data_baixa", "Data Baixa", "Date", false, "", 0, 0, false],
+            ["valor_residual", "Valor Residual", "Decimal", false, "", 0, 11, false],
         ]);
 		
 		/*

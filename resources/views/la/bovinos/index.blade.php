@@ -60,6 +60,7 @@
 					
 					{{--
 					@la_input($module, 'nome')
+					@la_input($module, 'codigo')
 					@la_input($module, 'sexo')
 					@la_input($module, 'nascimento')
 					@la_input($module, 'pai')
@@ -68,6 +69,9 @@
 					@la_input($module, 'peso')
 					@la_input($module, 'origem')
 					@la_input($module, 'cateagoria')
+					@la_input($module, 'foto')
+					@la_input($module, 'raca')
+					@la_input($module, 'grau_sangue')
 					--}}
 				</div>
 			</div>

@@ -108,6 +108,7 @@
 					</div>
 					<div class="panel-body">
 						@la_display($module, 'nome')
+						@la_display($module, 'codigo')
 						@la_display($module, 'sexo')
 						@la_display($module, 'nascimento')
 						@la_display($module, 'pai')
@@ -116,6 +117,9 @@
 						@la_display($module, 'peso')
 						@la_display($module, 'origem')
 						@la_display($module, 'cateagoria')
+						@la_display($module, 'foto')
+						@la_display($module, 'raca')
+						@la_display($module, 'grau_sangue')
 					</div>
 				</div>
 			</div>

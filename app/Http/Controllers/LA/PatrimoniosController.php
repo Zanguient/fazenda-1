@@ -23,7 +23,7 @@ class PatrimoniosController extends Controller
 {
 	public $show_action = true;
 	public $view_col = 'numero';
-	public $listing_cols = ['id', 'numero', 'tipo', 'valor', 'data_entrada', 'depreciacao'];
+	public $listing_cols = ['id', 'numero', 'tipo', 'valor', 'data_entrada', 'depreciacao', 'vida_util', 'numero_nota', 'data_baixa', 'valor_residual'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

@@ -38,6 +38,10 @@
 					@la_input($module, 'valor')
 					@la_input($module, 'data_entrada')
 					@la_input($module, 'depreciacao')
+					@la_input($module, 'vida_util')
+					@la_input($module, 'numero_nota')
+					@la_input($module, 'data_baixa')
+					@la_input($module, 'valor_residual')
 					--}}
                     <br>
 					<div class="form-group">

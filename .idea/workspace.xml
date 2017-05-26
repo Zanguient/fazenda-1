@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c02f1968-7430-4b61-86e3-f3ff31ea8d05" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/la/ordenhas/Tarefas" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/la/ordenhas/insert2.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/431ea5cb-b5e7-4e75-baff-2275a470ea99.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/431ea5cb-b5e7-4e75-baff-2275a470ea99.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LA/OrdenhasController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LA/OrdenhasController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LA/BovinosController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LA/BovinosController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LA/PatrimoniosController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LA/PatrimoniosController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/admin_routes.php" afterPath="$PROJECT_DIR$/app/Http/admin_routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_04_19_174851_create_ordenhas_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_04_19_174851_create_ordenhas_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/ordenhas/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/ordenhas/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/ordenhas/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/ordenhas/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/ordenhas/insert.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/ordenhas/insert.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/ordenhas/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/ordenhas/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_04_19_171904_create_bovinos_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_04_19_171904_create_bovinos_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_05_02_174707_create_patrimonios_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_05_02_174707_create_patrimonios_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/bovinos/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/bovinos/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/bovinos/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/bovinos/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/bovinos/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/bovinos/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/fazendas/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/fazendas/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/patrimonios/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/patrimonios/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/patrimonios/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/patrimonios/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/la/patrimonios/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/la/patrimonios/show.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,6 +43,20 @@
       </PATH_ELEMENT>
       <PATH_ELEMENT>
         <option name="myItemId" value="fazenda@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="fazenda@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="fazenda" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -74,8 +90,8 @@
       <file leaf-file-name="OrdenhasController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LA/OrdenhasController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="276" column="44" lean-forward="true" selection-start-line="276" selection-start-column="44" selection-end-line="276" selection-end-column="44" />
+            <state relative-caret-position="4205">
+              <caret line="272" column="5" lean-forward="false" selection-start-line="272" selection-start-column="5" selection-end-line="272" selection-end-column="5" />
               <folding>
                 <element signature="e#2397#3004#0#PHP" expanded="false" />
                 <element signature="e#3133#3685#0#PHP" expanded="false" />
@@ -87,52 +103,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/admin_routes.php">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/la/fazendas/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2349">
-              <caret line="81" column="128" lean-forward="false" selection-start-line="81" selection-start-column="128" selection-end-line="81" selection-end-column="128" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/431ea5cb-b5e7-4e75-baff-2275a470ea99/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="4" column="95" lean-forward="true" selection-start-line="4" selection-start-column="95" selection-end-line="4" selection-end-column="95" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ordenhaService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/la-assets/js/services/ordenhaService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrdenhaCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/la-assets/js/controllers/OrdenhaCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angularApp.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/la-assets/js/angularApp.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="460">
+              <caret line="117" column="9" lean-forward="true" selection-start-line="117" selection-start-column="9" selection-end-line="117" selection-end-column="9" />
+              <folding>
+                <element signature="e#1434#1441#1#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -175,9 +153,9 @@
       <find>bovinos</find>
       <find>TES</find>
       <find>bovinos[</find>
+      <find>@{</find>
       <find>@</find>
       <find>@{{</find>
-      <find>@{</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,6 +183,8 @@
         <option value="$PROJECT_DIR$/app/Http/admin_routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LA/OrdenhasController.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/431ea5cb-b5e7-4e75-baff-2275a470ea99/console.sql" />
+        <option value="dbtable:/bcc6b230/431ea5cb-b5e7-4e75-baff-2275a470ea99/fazenda.bovinos" />
+        <option value="$PROJECT_DIR$/resources/views/la/fazendas/index.blade.php" />
       </list>
     </option>
   </component>
@@ -313,9 +293,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-24" />
     <option name="width" value="1366" />
-    <option name="height" value="792" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -334,7 +313,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -409,7 +387,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ordenhas" />
+              <option name="myItemId" value="fazendas" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -429,13 +407,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="last_opened_file_path" value="$USER_HOME$/servidor/popserver" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="datab&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;admin&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/admin_routes.php&#10;in&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert.blade.php&#10;insert&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert.blade.php&#10;database&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;app&#9;FILE&#9;file:///var/www/html/fazenda/public/la-assets/js/angularApp.js&#10;inser&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert2.php&#10;index.blade&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/bovinos/index.blade.php&#10;ord&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;data&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;orde&#9;FILE&#9;file:///var/www/html/fazenda/public/la-assets/js/controllers/OrdenhaCtrl.js&#10;ordenhaSe&#9;FILE&#9;file:///var/www/html/fazenda/public/la-assets/js/services/ordenhaService.js&#10;insert2&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert2.php&#10;Ordenhas&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;conso&#9;FILE&#9;file:///home/emmanuell/.PhpStorm2017.1/config/consoles/db/431ea5cb-b5e7-4e75-baff-2275a470ea99/console.sql&#10;app.php&#9;FILE&#9;file:///var/www/html/fazenda/config/app.php&#10;Ordenha&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;admin_r&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/admin_routes.php&#10;Ord&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;admin_route&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/admin_routes.php" />
+    <property name="SearchEverywhereHistoryKey" value="databa&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;data&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;database&#9;ACTION&#9;ActivateDatabaseConsoleToolWindow&#10;perfil&#9;FILE&#9;file:///var/www/html/fazenda/storage/uploads/2017-05-18-203353-perfil.png&#10;datab&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;admin&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/admin_routes.php&#10;in&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert.blade.php&#10;insert&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert.blade.php&#10;app&#9;FILE&#9;file:///var/www/html/fazenda/public/la-assets/js/angularApp.js&#10;inser&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert2.php&#10;index.blade&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/bovinos/index.blade.php&#10;ord&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;orde&#9;FILE&#9;file:///var/www/html/fazenda/public/la-assets/js/controllers/OrdenhaCtrl.js&#10;ordenhaSe&#9;FILE&#9;file:///var/www/html/fazenda/public/la-assets/js/services/ordenhaService.js&#10;insert2&#9;FILE&#9;file:///var/www/html/fazenda/resources/views/la/ordenhas/insert2.php&#10;Ordenhas&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;conso&#9;FILE&#9;file:///home/emmanuell/.PhpStorm2017.1/config/consoles/db/431ea5cb-b5e7-4e75-baff-2275a470ea99/console.sql&#10;app.php&#9;FILE&#9;file:///var/www/html/fazenda/config/app.php&#10;Ordenha&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;admin_r&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/admin_routes.php&#10;Ord&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/Controllers/LA/OrdenhasController.php&#10;admin_route&#9;FILE&#9;file:///var/www/html/fazenda/app/Http/admin_routes.php" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="full.screen.before.presentation.mode" value="false" />
@@ -567,12 +546,20 @@
       <workItem from="1494069400189" duration="1385000" />
       <workItem from="1494702879119" duration="1354000" />
       <workItem from="1494850672376" duration="355000" />
-      <workItem from="1495136934641" duration="1544000" />
+      <workItem from="1495136934641" duration="4104000" />
+      <workItem from="1495196712550" duration="10377000" />
+      <workItem from="1495505250979" duration="649000" />
+      <workItem from="1495505934189" duration="1214000" />
+      <workItem from="1495564800253" duration="1571000" />
+      <workItem from="1495627816896" duration="6061000" />
+      <workItem from="1495738195325" duration="1198000" />
+      <workItem from="1495741219985" duration="1664000" />
+      <workItem from="1495801076486" duration="1156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185530000" />
+    <option name="totallyTimeSpent" value="211980000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -584,29 +571,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-24" width="1366" height="792" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20790629" sideWeight="0.48958334" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2408492" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35539567" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47265625" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14787701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28623718" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22620791" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.453125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35465926" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17642753" sideWeight="0.5104167" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3450521" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27955493" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.453125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -647,42 +634,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/la-assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/la-assets/js/angularApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="55" lean-forward="false" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/la-assets/js/services/ordenhaService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/dwij/laraadmin/src/LAFormMaker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24766">
-          <caret line="854" column="37" lean-forward="true" selection-start-line="854" selection-start-column="37" selection-end-line="854" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LA/OrdenhasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1276">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -837,18 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/bcc6b230/431ea5cb-b5e7-4e75-baff-2275a470ea99/fazenda.bovinos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/la-assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -940,32 +879,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/la-assets/js/angularApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/la/ordenhas/insert2.php" />
-    <entry file="file://$PROJECT_DIR$/public/la-assets/js/services/ordenhaService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/la/ordenhas/Tarefas" />
-    <entry file="file://$PROJECT_DIR$/public/la-assets/js/controllers/OrdenhaCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/la/ordenhas/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="899">
@@ -982,18 +897,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage/uploads/2017-05-18-203353-perfil.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/bcc6b230/431ea5cb-b5e7-4e75-baff-2275a470ea99/fazenda.uploads">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/la-assets/js/services/ordenhaService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/la-assets/js/controllers/OrdenhaCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/431ea5cb-b5e7-4e75-baff-2275a470ea99/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="true" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/bcc6b230/431ea5cb-b5e7-4e75-baff-2275a470ea99/fazenda.carros">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/la/fazendas/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/admin_routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2349">
-          <caret line="81" column="128" lean-forward="false" selection-start-line="81" selection-start-column="128" selection-end-line="81" selection-end-column="128" />
-          <folding />
+        <state relative-caret-position="683">
+          <caret line="74" column="30" lean-forward="false" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/la-assets/js/angularApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/bcc6b230/431ea5cb-b5e7-4e75-baff-2275a470ea99/fazenda.bovinos">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LA/OrdenhasController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="276" column="44" lean-forward="true" selection-start-line="276" selection-start-column="44" selection-end-line="276" selection-end-column="44" />
+        <state relative-caret-position="4205">
+          <caret line="272" column="5" lean-forward="false" selection-start-line="272" selection-start-column="5" selection-end-line="272" selection-end-column="5" />
           <folding>
             <element signature="e#2397#3004#0#PHP" expanded="false" />
             <element signature="e#3133#3685#0#PHP" expanded="false" />
@@ -1004,11 +994,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/431ea5cb-b5e7-4e75-baff-2275a470ea99/console.sql">
+    <entry file="file://$PROJECT_DIR$/resources/views/la/fazendas/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="4" column="95" lean-forward="true" selection-start-line="4" selection-start-column="95" selection-end-line="4" selection-end-column="95" />
-          <folding />
+        <state relative-caret-position="460">
+          <caret line="117" column="9" lean-forward="true" selection-start-line="117" selection-start-column="9" selection-end-line="117" selection-end-column="9" />
+          <folding>
+            <element signature="e#1434#1441#1#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

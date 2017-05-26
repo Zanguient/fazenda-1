@@ -94,4 +94,5 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== Funcionarios ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/funcionarios', 'LA\FuncionariosController');
 	Route::get(config('laraadmin.adminRoute') . '/funcionario_dt_ajax', 'LA\FuncionariosController@dtajax');
+
 });

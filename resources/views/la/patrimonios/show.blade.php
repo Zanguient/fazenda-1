@@ -112,6 +112,10 @@
 						@la_display($module, 'valor')
 						@la_display($module, 'data_entrada')
 						@la_display($module, 'depreciacao')
+						@la_display($module, 'vida_util')
+						@la_display($module, 'numero_nota')
+						@la_display($module, 'data_baixa')
+						@la_display($module, 'valor_residual')
 					</div>
 				</div>
 			</div>
