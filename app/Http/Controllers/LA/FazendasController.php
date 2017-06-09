@@ -23,7 +23,7 @@ class FazendasController extends Controller
 {
 	public $show_action = true;
 	public $view_col = 'nome';
-	public $listing_cols = ['id', 'codigo', 'nome', 'endereco', 'cidade', 'cep', 'telefone', 'celular', 'pais', 'contato', 'cnpj', 'inscri_estadual', 'tecnico', 'registro_conselho', 'area', 'email', 'info'];
+	public $listing_cols = ['id', 'estado', 'codigo', 'nome', 'cidade', 'telefone', 'cep', 'contato', 'endereco', 'celular', 'pais', 'cnpj', 'inscri_estadual', 'tecnico', 'registro_conselho', 'area', 'email', 'info'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

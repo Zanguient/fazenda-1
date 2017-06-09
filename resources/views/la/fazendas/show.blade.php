@@ -107,15 +107,16 @@
 						<h4>General Info</h4>
 					</div>
 					<div class="panel-body">
+						@la_display($module, 'estado')
 						@la_display($module, 'codigo')
 						@la_display($module, 'nome')
-						@la_display($module, 'endereco')
 						@la_display($module, 'cidade')
-						@la_display($module, 'cep')
 						@la_display($module, 'telefone')
+						@la_display($module, 'cep')
+						@la_display($module, 'contato')
+						@la_display($module, 'endereco')
 						@la_display($module, 'celular')
 						@la_display($module, 'pais')
-						@la_display($module, 'contato')
 						@la_display($module, 'cnpj')
 						@la_display($module, 'inscri_estadual')
 						@la_display($module, 'tecnico')
