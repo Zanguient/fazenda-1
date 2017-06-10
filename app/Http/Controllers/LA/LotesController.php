@@ -17,38 +17,37 @@ use Collective\Html\FormFacade as Form;
 use Dwij\Laraadmin\Models\Module;
 use Dwij\Laraadmin\Models\ModuleFields;
 
-use App\Models\Fazenda;
+use App\Models\Lote;
 
-class FazendasController extends Controller
+class LotesController extends Controller
 {
 	public $show_action = true;
 	public $view_col = 'nome';
-//	public $listing_cols = ['id', 'estado', 'codigo', 'nome', 'cidade', 'telefone', 'cep', 'contato', 'endereco', 'celular', 'pais', 'cnpj', 'inscri_estadual', 'tecnico', 'registro_conselho', 'area', 'email', 'info'];
-	public $listing_cols = ['id', 'nome','estado', 'codigo','pais', 'cnpj','email', 'info'];
-
+	public $listing_cols = ['id', 'nome', 'data'];
+	
 	public function __construct() {
 		// Field Access of Listing Columns
 		if(\Dwij\Laraadmin\Helpers\LAHelper::laravel_ver() == 5.3) {
 			$this->middleware(function ($request, $next) {
-				$this->listing_cols = ModuleFields::listingColumnAccessScan('Fazendas', $this->listing_cols);
+				$this->listing_cols = ModuleFields::listingColumnAccessScan('Lotes', $this->listing_cols);
 				return $next($request);
 			});
 		} else {
-			$this->listing_cols = ModuleFields::listingColumnAccessScan('Fazendas', $this->listing_cols);
+			$this->listing_cols = ModuleFields::listingColumnAccessScan('Lotes', $this->listing_cols);
 		}
 	}
 	
 	/**
-	 * Display a listing of the Fazendas.
+	 * Display a listing of the Lotes.
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index()
 	{
-		$module = Module::get('Fazendas');
+		$module = Module::get('Lotes');
 		
 		if(Module::hasAccess($module->id)) {
-			return View('la.fazendas.index', [
+			return View('la.lotes.index', [
 				'show_actions' => $this->show_action,
 				'listing_cols' => $this->listing_cols,
 				'module' => $module
@@ -59,7 +58,7 @@ class FazendasController extends Controller
 	}
 
 	/**
-	 * Show the form for creating a new fazenda.
+	 * Show the form for creating a new lote.
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
@@ -69,16 +68,16 @@ class FazendasController extends Controller
 	}
 
 	/**
-	 * Store a newly created fazenda in database.
+	 * Store a newly created lote in database.
 	 *
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
 	public function store(Request $request)
 	{
-		if(Module::hasAccess("Fazendas", "create")) {
+		if(Module::hasAccess("Lotes", "create")) {
 		
-			$rules = Module::validateRules("Fazendas", $request);
+			$rules = Module::validateRules("Lotes", $request);
 			
 			$validator = Validator::make($request->all(), $rules);
 			
@@ -86,9 +85,9 @@ class FazendasController extends Controller
 				return redirect()->back()->withErrors($validator)->withInput();
 			}
 			
-			$insert_id = Module::insert("Fazendas", $request);
+			$insert_id = Module::insert("Lotes", $request);
 			
-			return redirect()->route(config('laraadmin.adminRoute') . '.fazendas.index');
+			return redirect()->route(config('laraadmin.adminRoute') . '.lotes.index');
 			
 		} else {
 			return redirect(config('laraadmin.adminRoute')."/");
@@ -96,30 +95,30 @@ class FazendasController extends Controller
 	}
 
 	/**
-	 * Display the specified fazenda.
+	 * Display the specified lote.
 	 *
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
 	public function show($id)
 	{
-		if(Module::hasAccess("Fazendas", "view")) {
+		if(Module::hasAccess("Lotes", "view")) {
 			
-			$fazenda = Fazenda::find($id);
-			if(isset($fazenda->id)) {
-				$module = Module::get('Fazendas');
-				$module->row = $fazenda;
+			$lote = Lote::find($id);
+			if(isset($lote->id)) {
+				$module = Module::get('Lotes');
+				$module->row = $lote;
 				
-				return view('la.fazendas.show', [
+				return view('la.lotes.show', [
 					'module' => $module,
 					'view_col' => $this->view_col,
 					'no_header' => true,
 					'no_padding' => "no-padding"
-				])->with('fazenda', $fazenda);
+				])->with('lote', $lote);
 			} else {
 				return view('errors.404', [
 					'record_id' => $id,
-					'record_name' => ucfirst("fazenda"),
+					'record_name' => ucfirst("lote"),
 				]);
 			}
 		} else {
@@ -128,28 +127,28 @@ class FazendasController extends Controller
 	}
 
 	/**
-	 * Show the form for editing the specified fazenda.
+	 * Show the form for editing the specified lote.
 	 *
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
 	public function edit($id)
 	{
-		if(Module::hasAccess("Fazendas", "edit")) {			
-			$fazenda = Fazenda::find($id);
-			if(isset($fazenda->id)) {	
-				$module = Module::get('Fazendas');
+		if(Module::hasAccess("Lotes", "edit")) {			
+			$lote = Lote::find($id);
+			if(isset($lote->id)) {	
+				$module = Module::get('Lotes');
 				
-				$module->row = $fazenda;
+				$module->row = $lote;
 				
-				return view('la.fazendas.edit', [
+				return view('la.lotes.edit', [
 					'module' => $module,
 					'view_col' => $this->view_col,
-				])->with('fazenda', $fazenda);
+				])->with('lote', $lote);
 			} else {
 				return view('errors.404', [
 					'record_id' => $id,
-					'record_name' => ucfirst("fazenda"),
+					'record_name' => ucfirst("lote"),
 				]);
 			}
 		} else {
@@ -158,7 +157,7 @@ class FazendasController extends Controller
 	}
 
 	/**
-	 * Update the specified fazenda in storage.
+	 * Update the specified lote in storage.
 	 *
 	 * @param  \Illuminate\Http\Request  $request
 	 * @param  int  $id
@@ -166,9 +165,9 @@ class FazendasController extends Controller
 	 */
 	public function update(Request $request, $id)
 	{
-		if(Module::hasAccess("Fazendas", "edit")) {
+		if(Module::hasAccess("Lotes", "edit")) {
 			
-			$rules = Module::validateRules("Fazendas", $request, true);
+			$rules = Module::validateRules("Lotes", $request, true);
 			
 			$validator = Validator::make($request->all(), $rules);
 			
@@ -176,9 +175,9 @@ class FazendasController extends Controller
 				return redirect()->back()->withErrors($validator)->withInput();;
 			}
 			
-			$insert_id = Module::updateRow("Fazendas", $request, $id);
+			$insert_id = Module::updateRow("Lotes", $request, $id);
 			
-			return redirect()->route(config('laraadmin.adminRoute') . '.fazendas.index');
+			return redirect()->route(config('laraadmin.adminRoute') . '.lotes.index');
 			
 		} else {
 			return redirect(config('laraadmin.adminRoute')."/");
@@ -186,18 +185,18 @@ class FazendasController extends Controller
 	}
 
 	/**
-	 * Remove the specified fazenda from storage.
+	 * Remove the specified lote from storage.
 	 *
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
 	public function destroy($id)
 	{
-		if(Module::hasAccess("Fazendas", "delete")) {
-			Fazenda::find($id)->delete();
+		if(Module::hasAccess("Lotes", "delete")) {
+			Lote::find($id)->delete();
 			
 			// Redirecting to index() method
-			return redirect()->route(config('laraadmin.adminRoute') . '.fazendas.index');
+			return redirect()->route(config('laraadmin.adminRoute') . '.lotes.index');
 		} else {
 			return redirect(config('laraadmin.adminRoute')."/");
 		}
@@ -210,11 +209,11 @@ class FazendasController extends Controller
 	 */
 	public function dtajax()
 	{
-		$values = DB::table('fazendas')->select($this->listing_cols)->whereNull('deleted_at');
+		$values = DB::table('lotes')->select($this->listing_cols)->whereNull('deleted_at');
 		$out = Datatables::of($values)->make();
 		$data = $out->getData();
 
-		$fields_popup = ModuleFields::getModuleFields('Fazendas');
+		$fields_popup = ModuleFields::getModuleFields('Lotes');
 		
 		for($i=0; $i < count($data->data); $i++) {
 			for ($j=0; $j < count($this->listing_cols); $j++) { 
@@ -223,7 +222,7 @@ class FazendasController extends Controller
 					$data->data[$i][$j] = ModuleFields::getFieldValue($fields_popup[$col], $data->data[$i][$j]);
 				}
 				if($col == $this->view_col) {
-					$data->data[$i][$j] = '<a href="'.url(config('laraadmin.adminRoute') . '/fazendas/'.$data->data[$i][0]).'">'.$data->data[$i][$j].'</a>';
+					$data->data[$i][$j] = '<a href="'.url(config('laraadmin.adminRoute') . '/lotes/'.$data->data[$i][0]).'">'.$data->data[$i][$j].'</a>';
 				}
 				// else if($col == "author") {
 				//    $data->data[$i][$j];
@@ -232,12 +231,12 @@ class FazendasController extends Controller
 			
 			if($this->show_action) {
 				$output = '';
-				if(Module::hasAccess("Fazendas", "edit")) {
-					$output .= '<a href="'.url(config('laraadmin.adminRoute') . '/fazendas/'.$data->data[$i][0].'/edit').'" class="btn btn-warning btn-xs" style="display:inline;padding:2px 5px 3px 5px;"><i class="fa fa-edit"></i></a>';
+				if(Module::hasAccess("Lotes", "edit")) {
+					$output .= '<a href="'.url(config('laraadmin.adminRoute') . '/lotes/'.$data->data[$i][0].'/edit').'" class="btn btn-warning btn-xs" style="display:inline;padding:2px 5px 3px 5px;"><i class="fa fa-edit"></i></a>';
 				}
 				
-				if(Module::hasAccess("Fazendas", "delete")) {
-					$output .= Form::open(['route' => [config('laraadmin.adminRoute') . '.fazendas.destroy', $data->data[$i][0]], 'method' => 'delete', 'style'=>'display:inline']);
+				if(Module::hasAccess("Lotes", "delete")) {
+					$output .= Form::open(['route' => [config('laraadmin.adminRoute') . '.lotes.destroy', $data->data[$i][0]], 'method' => 'delete', 'style'=>'display:inline']);
 					$output .= ' <button class="btn btn-danger btn-xs" type="submit"><i class="fa fa-times"></i></button>';
 					$output .= Form::close();
 				}

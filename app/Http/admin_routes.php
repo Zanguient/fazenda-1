@@ -95,4 +95,8 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::resource(config('laraadmin.adminRoute') . '/funcionarios', 'LA\FuncionariosController');
 	Route::get(config('laraadmin.adminRoute') . '/funcionario_dt_ajax', 'LA\FuncionariosController@dtajax');
 
+
+	/* ================== Lotes ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/lotes', 'LA\LotesController');
+	Route::get(config('laraadmin.adminRoute') . '/lote_dt_ajax', 'LA\LotesController@dtajax');
 });

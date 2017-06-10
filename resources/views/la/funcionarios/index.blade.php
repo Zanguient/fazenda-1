@@ -56,43 +56,61 @@
 			{!! Form::open(['action' => 'LA\FuncionariosController@store', 'id' => 'funcionario-add-form']) !!}
 			<div class="modal-body">
 				<div class="box-body">
-                    @la_form($module)
-					
-					{{--
-					@la_input($module, 'nome')
-					@la_input($module, 'cpf')
-					@la_input($module, 'funcao')
-					@la_input($module, 'celular')
-					@la_input($module, 'sexo')
-					@la_input($module, 'data_nascimento')
-					@la_input($module, 'telefone_residencial')
-					@la_input($module, 'telefone_comercial')
-					@la_input($module, 'city')
-					@la_input($module, 'bairro')
-					@la_input($module, 'numero')
-					@la_input($module, 'rua')
-					@la_input($module, 'complemento')
-					@la_input($module, 'cep')
-					--}}
+					<table class="table table-responsive">
+						<tr>
+							<td>@la_input($module, 'nome')</td>
+							<td>@la_input($module, 'sexo')</td>
+							<td>@la_input($module, 'funcao')</td>
+							<td>@la_input($module, 'celular')</td>
+						</tr>
+						<tr>
+							<td>@la_input($module, 'cpf')</td>
+							<td>@la_input($module, 'data_nascimento')</td>
+							<td>@la_input($module, 'telefone_residencial')</td>
+							<td>@la_input($module, 'telefone_comercial')</td>
+						</tr>
+						<tr>
+							<td>@la_input($module, 'cep')</td>
+							<td>@la_input($module, 'rua')</td>
+							<td>@la_input($module, 'bairro')</td>
+							<td>@la_input($module, 'numero')</td>
+						</tr>
+						<tr>
+							<td>@la_input($module, 'complemento')</td>
+							<td>@la_input($module, 'city')</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				{!! Form::submit( 'Submit', ['class'=>'btn btn-success']) !!}
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+				{!! Form::submit( 'Cadastrar Funcionario', ['class'=>'btn btn-success']) !!}
 			</div>
 			{!! Form::close() !!}
 		</div>
 	</div>
 </div>
 @endla_access
+<input type="text" name="cep">
 
 @endsection
 
 @push('styles')
+<style>
+	.modal-dialog{
+		width: 85%;
+	}
+	.form-group{
+		margin-bottom: 0px !important;
+	}
+</style>
 <link rel="stylesheet" type="text/css" href="{{ asset('la-assets/plugins/datatables/datatables.min.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ asset('la-assets/plugins/datatables/datatables.min.css') }}"/>
+
 @endpush
 
 @push('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 <script src="{{ asset('la-assets/plugins/datatables/datatables.min.js') }}"></script>
 <script>
 $(function () {
@@ -114,4 +132,68 @@ $(function () {
 	});
 });
 </script>
+<script type="text/javascript">
+	$(window).on('load',function(){
+		$('#AddModal').modal('show');
+	});
+</script>
+<script>
+    console.log("chamou as funcoes de mascara!");
+    $(document).ready(function(){
+        var SPMaskBehavior = function (val) {
+                return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+            },
+            spOptions = {
+                onKeyPress: function(val, e, field, options) {
+                    field.mask(SPMaskBehavior.apply({}, arguments), options);
+                }
+            };
+        $('input[name=celular]').mask(SPMaskBehavior, spOptions);
+        $('input[name=telefone]').mask(SPMaskBehavior, spOptions);
+        $('input[name=telefone_residencial]').mask(SPMaskBehavior, spOptions );
+        $('input[name=telefone_comercial]').mask(SPMaskBehavior, spOptions );
+        $('input[name=cep]').mask('00000-000');
+        $('input[name=cpf]').mask('000.000.000-00');
+        $('input[name=cnpj]').mask('00.000.000/0000-00', {reverse: true});
+        $('.date').mask('00/00/0000');
+        $('.time').mask('00:00:00');
+        $('.date_time').mask('00/00/0000 00:00:00');
+        $('.phone').mask('0000-0000' );
+        $('.phone_with_ddd').mask('(00) 0000-0000');
+        $('.phone_us').mask('(000) 000-0000');
+        $('.mixed').mask('AAA 000-S0S');
+        $('.cpf').mask('000.000.000-00', {reverse: true});
+        $('.money').mask('000.000.000.000.000,00', {reverse: true});
+        $('.money2').mask("#.##0,00", {reverse: true});
+        $('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
+    });
+</script>
+
+<script type="text/javascript">
+    jQuery(function($){
+        $('input[name=cep]').change(function(){
+            console.log("entrou na função de cep");
+            var cep_code = $(this).val();
+            if( cep_code.length <= 0 )
+                return;
+            console.log("valor do cep" + cep_code);
+            $.get("http://apps.widenet.com.br/busca-cep/api/cep.json", { code: cep_code },
+                function(result){
+                	console.log("Buscar realizada");
+                	console.log(result);
+                    if( result.status!=1 ){
+                        alert(result.message || "Houve um erro desconhecido");
+                        return;
+                    }
+                    $("input#cep").val( result.code );
+                    $("input[name=estado]").val( result.state );
+                    $("input[name=city]").val( result.city );
+                    $("input[name=bairro]").val( result.district );
+                    $("input[name=rua]").val( result.address );
+                });
+        });
+    });
+</script>
+
+
 @endpush

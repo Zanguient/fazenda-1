@@ -91,8 +91,6 @@
 </div>
 @endla_access
 
-<input type="text" class="date">
-<input type="text" name="cep">
 @endsection
 
 @push('styles')
@@ -111,9 +109,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 <script src="{{ asset('la-assets/plugins/datatables/datatables.min.js') }}"></script>
 <script type="text/javascript">
-    $(window).on('load',function(){
-        $('#AddModal').modal('show');
-    });
+//    $(window).on('load',function(){
+//        $('#AddModal').modal('show');
+//    });
 </script>
 <script>
 $(function () {
