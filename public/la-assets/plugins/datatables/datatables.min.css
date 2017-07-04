@@ -122,3 +122,16 @@ table.dataTable tbody>tr.selected,table.dataTable tbody>tr>.selected{background-
 
 /* DWIJ Changes */
 div.dataTables_wrapper div.dataTables_filter input{border-radius:3px;min-width:200px;font-size:14px;}
+
+.modal-dialog{
+  width: 80%;
+}
+.modal-header{
+  color: white;
+  background-color: #00acd6;
+  text-align: center;
+}
+
+#myModalLabel{
+  font-size: 22px;
+}
