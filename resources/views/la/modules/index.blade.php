@@ -150,7 +150,7 @@ $(function () {
 	
 	$('input[name=icon]').iconpicker();
 	$("#dt_modules").DataTable({
-		
+        iDisplayLength: -1
 	});
 	$("#module-add-form").validate({
 		

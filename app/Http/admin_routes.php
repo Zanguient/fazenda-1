@@ -99,4 +99,9 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== Lotes ================== */
 	Route::resource(config('laraadmin.adminRoute') . '/lotes', 'LA\LotesController');
 	Route::get(config('laraadmin.adminRoute') . '/lote_dt_ajax', 'LA\LotesController@dtajax');
+
+	/* ================== Testes ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/testes', 'LA\TestesController');
+	Route::get(config('laraadmin.adminRoute') . '/testis_dt_ajax', 'LA\TestesController@dtajax');
+
 });
